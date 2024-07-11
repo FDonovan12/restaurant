@@ -1,6 +1,6 @@
 package com.example.restaurant.service;
 
-import com.example.restaurant.exception.NotFound;
+import com.example.restaurant.exception.NotFoundRestaurantException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

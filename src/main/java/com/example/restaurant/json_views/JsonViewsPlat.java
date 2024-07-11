@@ -7,4 +7,6 @@ public class JsonViewsPlat {
 
     public interface Id {
     }
+    public interface Slug {
+    }
 }

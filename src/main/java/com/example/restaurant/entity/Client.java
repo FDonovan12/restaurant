@@ -26,7 +26,7 @@ public class Client implements EntityInterface, SluggerInterface {
     @JsonView(JsonViewsClient.Id.class)
     private Long id;
 
-    @JsonView(JsonViewsClient.SLug.class)
+    @JsonView(JsonViewsClient.Slug.class)
     private String slug;
 
     @Override

@@ -26,7 +26,7 @@ public class Reservation implements EntityInterface, SluggerInterface {
     @JsonView(JsonViewsReservation.Id.class)
     private Long id;
 
-    @JsonView(JsonViewsReservation.SLug.class)
+    @JsonView(JsonViewsReservation.Slug.class)
     private String slug;
 
     @Override

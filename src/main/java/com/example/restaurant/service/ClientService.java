@@ -3,7 +3,7 @@ package com.example.restaurant.service;
 import com.example.restaurant.entity.Client;
 import com.example.restaurant.repository.ClientRepository;
 import com.example.restaurant.DTO.ClientDTO;
-import com.example.restaurant.exception.NotFound;
+import com.example.restaurant.exception.NotFoundRestaurantException;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -31,12 +31,12 @@ public class ClientService implements DAOServiceInterface<Client> {
 
     public Client getObjectById(Long id) {
         Optional<Client> optionalClient = clientRepository.findById(id);
-        return optionalClient.orElseThrow(() -> new NotFound("Client", "id", id));
+        return optionalClient.orElseThrow(() -> new NotFoundRestaurantException("Client", "id", id));
     }
 
     public Client getObjectBySlug(String slug) {
         Optional<Client> optionalClient = clientRepository.findBySlug(slug);
-        return optionalClient.orElseThrow(() -> new NotFound("Client", "slug", slug));
+        return optionalClient.orElseThrow(() -> new NotFoundRestaurantException("Client", "slug", slug));
     }
 
     public Client persist(ClientDTO clientDTO) {

@@ -7,4 +7,6 @@ public class JsonViewsClient {
 
     public interface Id {
     }
+    public interface Slug {
+    }
 }

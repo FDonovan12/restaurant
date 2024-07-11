@@ -7,4 +7,7 @@ public class JsonViewsReservation {
 
     public interface Id {
     }
+
+    public interface Slug {
+    }
 }

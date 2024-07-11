@@ -1,6 +1,6 @@
 package com.example.restaurant.mapping;
 
-public class UrlRoute {
+public class UrlRoute implements UrlRouteClient, UrlRoutePlat, UrlRouteReservation {
 
     public static final String URL_API = "/api";
     public static final String URL_LOGIN = "/login";
