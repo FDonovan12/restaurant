@@ -26,8 +26,13 @@ public class Client implements EntityInterface, SluggerInterface {
     @JsonView(JsonViewsClient.Id.class)
     private Long id;
 
+    @OneToMany(mappedBy = "client")
+    @JsonView(JsonViewsClient.Plats.class)
+    private List<Plat> plats = new ArrayList<>();
+
     @JsonView(JsonViewsClient.Slug.class)
     private String slug;
+
 
     @Override
     public String getField() {

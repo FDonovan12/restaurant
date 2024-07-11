@@ -9,4 +9,7 @@ public class JsonViewsClient {
     }
     public interface Slug {
     }
+
+    public interface Plats {
+    }
 }
