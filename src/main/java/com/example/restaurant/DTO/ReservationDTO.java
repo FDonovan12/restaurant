@@ -21,4 +21,7 @@ public class ReservationDTO {
     @NotBlank(message = "This should be a valid name")
     private String name;
 
+    private List<Long> clientId;
+    private List<Long> PlatId;
+
 }

@@ -40,6 +40,9 @@ public class Client implements EntityInterface, SluggerInterface {
     private String slug;
 
 
+    public Client(String name) {
+        this.name = name;
+    }
     @Override
     public String getField() {
         return "" + id;

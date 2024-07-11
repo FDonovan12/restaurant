@@ -32,6 +32,10 @@ public class Plat implements EntityInterface, SluggerInterface {
     @JsonView(JsonViewsPlat.Slug.class)
     private String slug;
 
+    public Plat(String name) {
+        this.name = name;
+    }
+
     @Override
     public String getField() {
         return "" + id;

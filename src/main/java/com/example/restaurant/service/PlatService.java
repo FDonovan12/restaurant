@@ -49,13 +49,15 @@ public class PlatService implements DAOServiceInterface<Plat> {
             plat = getObjectById(id);
         }
 
+        plat.setName(platDTO.getName());
+
         return platRepository.saveAndFlush(plat);
     }
 
     public PlatDTO getDTOById(Long id) {
         Plat plat = getObjectById(id);
         PlatDTO dto = new PlatDTO();
-        // dto.setName(plat.getName());
+        dto.setName(plat.getName());
         return dto;
     }
 }

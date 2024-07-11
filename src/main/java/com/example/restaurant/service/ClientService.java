@@ -48,6 +48,7 @@ public class ClientService implements DAOServiceInterface<Client> {
         if (id != null) {
             client = getObjectById(id);
         }
+        client.setName(clientDTO.getName());
 
         return clientRepository.saveAndFlush(client);
     }
@@ -55,7 +56,7 @@ public class ClientService implements DAOServiceInterface<Client> {
     public ClientDTO getDTOById(Long id) {
         Client client = getObjectById(id);
         ClientDTO dto = new ClientDTO();
-        // dto.setName(client.getName());
+        dto.setName(client.getName());
         return dto;
     }
 }
