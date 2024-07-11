@@ -29,7 +29,10 @@ public class Client implements EntityInterface, SluggerInterface {
     @JsonView(JsonViewsClient.Name.class)
     private String name;
 
-    @OneToMany(mappedBy = "client")
+    @ManyToMany
+    @JoinTable(name = "client_reservation",
+            joinColumns = @JoinColumn(name="client_id"),
+            inverseJoinColumns = @JoinColumn(name="reservation_id"))
     @JsonView(JsonViewsClient.Reservations.class)
     private List<Reservation> reservations = new ArrayList<>();
 

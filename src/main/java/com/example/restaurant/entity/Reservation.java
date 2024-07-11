@@ -26,7 +26,10 @@ public class Reservation implements EntityInterface, SluggerInterface {
     @JsonView(JsonViewsReservation.Id.class)
     private Long id;
 
-    @OneToMany(mappedBy = "reservation")
+    @ManyToMany
+    @JoinTable(name = "reservation_plat",
+            joinColumns = @JoinColumn(name="reservation_id"),
+            inverseJoinColumns = @JoinColumn(name="plat_id"))
     @JsonView(JsonViewsReservation.Plats.class)
     private List<Plat> plats = new ArrayList<>();
 
