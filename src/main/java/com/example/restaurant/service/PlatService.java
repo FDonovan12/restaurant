@@ -50,6 +50,8 @@ public class PlatService implements DAOServiceInterface<Plat> {
         }
 
         plat.setName(platDTO.getName());
+        plat.setDescription(platDTO.getDescription());
+        plat.setPrix(platDTO.getPrix());
 
         return platRepository.saveAndFlush(plat);
     }

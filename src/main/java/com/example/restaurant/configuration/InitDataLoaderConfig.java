@@ -25,8 +25,8 @@ public class InitDataLoaderConfig implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        createPlat();
-        createClient();
+//        createPlat();
+//        createClient();
         System.out.println("end init loader");
     }
 

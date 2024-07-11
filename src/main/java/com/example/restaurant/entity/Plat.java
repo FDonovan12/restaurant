@@ -29,6 +29,12 @@ public class Plat implements EntityInterface, SluggerInterface {
     @JsonView(JsonViewsPlat.Name.class)
     private String name;
 
+    @JsonView(JsonViewsPlat.Description.class)
+    private String description;
+
+    @JsonView(JsonViewsPlat.Prix.class)
+    private int prix;
+
     @JsonView(JsonViewsPlat.Slug.class)
     private String slug;
 

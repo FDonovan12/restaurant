@@ -20,5 +20,9 @@ public class PlatDTO {
 
     @NotBlank(message = "This should be a valid name")
     private String name;
+    @NotBlank(message = "This should be a valid description")
+    private String description;
+
+    private int prix;
 
 }
